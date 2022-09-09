@@ -4,24 +4,27 @@
 
 function quantidadeDeElementos(arrayFicticio) {
     // TODO: retorne a quantidade de elementos de um arrayFicticio
-    console.log(quantidadeDeElementos.Length); 
+    console.log(quantidadeDeElementos.length); 
 }
 
 function ordenarArray(arrayFicticio) {
     // TODO: retorne um array ordenado, de acordo com o esperado
     // E.x. ordenarArray([4,3,8,1]) => deve retornar: [1,3,4,8]
     // E.x. ordenarArray(["Bruno", "Camila", "Alan"]) => deve retornar: ["Alan", "Bruno", "Camila"]
+    console.log(ordenarArray.sort);
 }
 
 function contemElemento(arrayFicticio, elemento) {
     // TODO: retorne true caso o elemento esteja presente no array
     // E.x. contemElemento([1,2,3], 3 ) => true // contemElemento([1,2,3], 4) => false
+    console.log(contemElemento.callback);
 }
 
 function fatia(arrayFicticio, tamanhoDaFatia) {
     // TODO: retorne uma fatia aleatória de tamanho fixo
     // E.x. fatia([1,2,3,4,5,6], 3) => [1,2,3]
     // E.x. fatia([1,2,3], 5) => false
+    return fatia === tamanhoDaFatia;
 }
 
 function podeBeber(idade) {
