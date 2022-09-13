@@ -11,13 +11,21 @@ function ordenarArray(arrayFicticio) {
     // TODO: retorne um array ordenado, de acordo com o esperado
     // E.x. ordenarArray([4,3,8,1]) => deve retornar: [1,3,4,8]
     // E.x. ordenarArray(["Bruno", "Camila", "Alan"]) => deve retornar: ["Alan", "Bruno", "Camila"]
+<<<<<<< Updated upstream
     return ordenarArray.sort;
+=======
+    console.log(ordenarArray.sort);
+>>>>>>> Stashed changes
 }
 
 function contemElemento(arrayFicticio, elemento) {
     // TODO: retorne true caso o elemento esteja presente no array
     // E.x. contemElemento([1,2,3], 3 ) => true // contemElemento([1,2,3], 4) => false
+<<<<<<< Updated upstream
     return contemElemento.callback;
+=======
+    console.log(contemElemento.callback);
+>>>>>>> Stashed changes
 }
 
 function fatia(arrayFicticio, tamanhoDaFatia) {
