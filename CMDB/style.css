@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+    background: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cabecalho {
+    display: grid;
+    grid-template-columns: minmax(250px,1fr) 4fr;
+    grid-template-areas: "logo menuSup";
+    background-color: #44b9b7;
+    padding: 2rem 2rem 2rem 0;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 0px;
+    align-items: center;
+    box-shadow: 0 2px 5px #70707060;
+    border-bottom: 1px solid #00908c;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(0, 144, 140);
+}
+
+.cabecalho-imagem {
+    text-align: right;
+    width: 200px;
+    height: 54px;
+    background-position: 50%;
+    background-position-x: 50%;
+    background-position-y: center;
+}
+
+.cabecalho-menu {
+    display:inline;
+    text-align:initial;
+    color: black;
+    padding: 1px;
+    padding-left: 2px;
+}
+
+.tabela {
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+.tabela-cabecalho {
+   background:#44b9b7;
+}
+
+td {
+    border: 1px solid black;
+    padding: 7px;
+}
+
+.evento {
+    margin-top: 20px;
+}
+
+label {
+    margin-top: 8px;
+}
+
+.d-none {
+    display: none
+}
+
+.display-vert {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+  }
+  
+.button {
+    display: flex;
+    margin: 12px;
+   
+  }

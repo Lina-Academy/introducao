@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CMDB Lina OpenX</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img class="cabecalho-imagem" src="LOGOL.png">
+        <h1>CMDB</h1>
+    </header>
+
+    <main>
+        <!-- <div class="cabecalho-menu">
+            <h1>1. Hub Fundos</h1>
+            <h1>2. Ambiente</h1>
+            <h1>2.1 Produção</h1>
+            <h1>2.2 Certificação</h1>
+    </div> -->
+    <button class="evento">Adicionar um novo evento</button>
+
+    <form id="form-evento" class="d-none">
+        <label for="ambiente">AMBIENTE</label>
+        <input type="text" name="ambiente" id="ambiente">
+
+        <label for="aplicacao">APLICAÇÃO</label>
+        <input type="text" name="aplicacao" id="aplicacao">
+
+        <label for="infraestrutura">INFRAESTRUTURA</label>
+        <input type="text" name="infraestrutura" id="infraestrutura">
+
+        <label for="objetivo">OBJETIVO</label>
+        <input type="text" name="objetivo" id="objetivo">
+
+        <label for="dependencia?">DEPENDENCIA</label>
+        <input type="text" name="dependencia" id="dependencia">
+
+        <label for="impacto servico">IMPACTO SERVIÇO</label>
+        <input type="text" name="impacto servico" id="impacto servico">
+
+        <label for="area">ÁREA</label>
+        <input type="text" name="area" id="area">
+
+        <label for="tecnologia">TECNOLOGIA</label>
+        <input type="text" name="tecnologia" id="tecnologia">
+
+        <label for="sla">SLA</label>
+        <input type="text" name="sla" id="sla">
+
+        <label for="setup">SETUP</label>
+        <input type="setup" name="setup" id="setup">
+
+        <label for="contigencia">CONTIGENCIA</label>
+        <input type="text" name="contigencia" id="contigencia">
+
+        <label for="backup">BACKUP</label>
+        <input type="backup" name="backup" id="backup">
+            
+        <label for="monitoracao">MONITORAÇÃO</label>
+        <input type="monitoracao" name="monitoracao" id="monitoracao">
+
+        <div class="flex">
+            <button id="voltar">Voltar</button>
+            <button id="submeter">Submeter</button>
+        </div>
+    </form>
+
+        <table border="2" class="tabela">
+            <thead class="tabela-cabecalho">
+                <tr>
+                    <th>Ambiente</th>
+                    <th>Aplicação</th>
+                    <th>Infraestrutura</th>
+                    <th>Objetivo</th>
+                    <th>Dependencia/Quem depende dele?</th>
+                    <th>Impacto serviço</th>
+                    <th>Área</th>
+                    <th>Tecnologia</th>
+                    <th>SLA</th>
+                    <th>SETUP</th>
+                    <th>Contigencia</th>
+                    <th>BACKUP</th>
+                    <th>Monitoração</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>HUB FUNDOS DEV / UAT / CERT / PROD</th>
+                    <td>Hub Fundos-rtm-Keycloak</td>
+                    <td>RTM CLOUD</td>
+                    <td>IAM / AUTENTICAÇÃO</td>
+                    <td>Base de dados Keycloak / rtm-Funds-spa</td>
+                    <td>Falha de autenticação do usuário de acessos as APIs</td>
+                    <td>Suporte Hub Fundos</td>
+                    <td>JAVA / IAM - Gestão de identidade e Acessos</td>
+                    <td>-</td>
+                    <td>Março 2022</td>
+                    <td>Alta disponibilidade / Kubernetes - SP/RJ</td>
+                    <td>Aplicação / Backup</td>
+                    <td>KUMA</td>
+                </tr>
+                <tr>
+                    <th>HUB FUNDOS DEV / UAT / CERT / PROD</th>
+                    <td>Hub Fundos-rtm-funds-spa</td>
+                    <td>RTM CLOUD</td>
+                    <td>Interface</td>
+                    <td>Base de dados Keycloack</td>
+                    <td>Falha ao acessar o portal Hub Fundos</td>
+                    <td>Suporte Hub Fundos</td>
+                    <td>React</td>
+                    <td>-</td>
+                    <td>Março 2022</td>
+                    <td>Alta disponibilidade / Kubernetes - SP/RJ</td>
+                    <td>Aplicação / Backup</td>
+                    <td>KUMA</td>
+                </tr>
+                <tr>
+                    <th>HUB FUNDOS DEV / UAT / CERT / PROD</th>
+                    <td>Hub Fundos-rtm-auth</td>
+                    <td>RTM CLOUD</td>
+                    <td>Autorização</td>
+                    <td>Base de dados Keycloak / rtm-Funds-spa</td>
+                    <td>Acesso as APIs</td>
+                    <td>Suporte Hub Fundos</td>
+                    <td>Node.js / Nest.js</td>
+                    <td>-</td>
+                    <td>Março 2022</td>
+                    <td>Alta disponibilidade Kubernetes - SP/RJ</td>
+                    <td>Aplicação / Bakup</td>
+                    <td>KUMA</td>
+                </tr>
+                <tr>
+                    <th>HUB FUNDOS DEV / UAT / CERT / PROD</th>
+                    <td>Hub Fundos-rtm-funds-info</td>
+                    <td>RTM CLOUD</td>
+                    <td>Fundos v1</td>
+                    <td>Base de dados Keycloak / rtm-Funds-spa</td>
+                    <td>Acesso as APIs</td>
+                    <td>Suporte Hub Fundos</td>
+                    <td>Node.js / Nest.js</td>
+                    <td>-</td>
+                    <td>Março 2022</td>
+                    <td>Alta disponibilidade Kubernetes - SP/RJ</td>
+                    <td>Aplicação / Backup</td>
+                    <td>KUMA</td>
+                </tr>
+                <tr>
+                    <th>HUB FUNDOS DEV / UAT / CERT / PROD</th>
+                    <td>Hub Fundos-rtm-participants</td>
+                    <td>RTM CLOUD</td>
+                    <td>Participantes v1</td>
+                    <td>Base de dados Keycloak / rtm-Funds-spa</td>
+                    <td>Acesso as APIs</td>
+                    <td>Suporte Hub Fundos</td>
+                    <td>Node.js / Nest.js</td>
+                    <td>-</td>
+                    <td>Março 2022</td>
+                    <td>Alta disponibilidade Kubernetes - SP/RJ</td>
+                    <td>Aplicação / Backup</td>
+                    <td>KUMA</td>
+                </tr>
+                <tr>
+                    <th>HUB FUNDOS DEV / UAT / CERT / PROD</th>
+                    <td>Hub Fundos-rtm-partipants-register</td>
+                    <td>RTM CLOUD</td>
+                    <td>Cadrasto de fundos</td>
+                    <td>Base de dados Keycloak / rtm-Funds-spa</td>
+                    <td>Acesso as APIs</td>
+                    <td>Suporte Hub Fundos</td>
+                    <td>Node.js / Nest.js</td>
+                    <td>-</td>
+                    <td>Março 2022</td>
+                    <td>Alta disponibilidade / Kubernetes - SP/RJ</td>
+                    <td>Aplicação / Backup</td>
+                    <td>KUMA</td>
+                </tr>
+                <tr>
+                    <th>HUB FUNDOS DEV / UAT / CERT / PROD</th>
+                    <td>Hub Fundos-rtm-ordens</td>
+                    <td>RTM CLOUD</td>
+                    <td>Aplicação e Regaste</td>
+                    <td>Base de dados Keycloak / rtm-Funds-Info e rtm-Participants</td>
+                    <td>Acesso as APIs</td>
+                    <td>Suporte Hub Fundos</td>
+                    <td>Node.js / Nest.js</td>
+                    <td>-</td>
+                    <td>Março 2022</td>
+                    <td>Alta disponibilidade Kubernetes - SP / RJ</td>
+                    <td>Aplicação / Backup</td>
+                    <td>KUMA</td>
+                </tr>
+                <tr>
+                    <th>HUB FUNDOS DEV / UAT / CERT / PROD</th>
+                    <td>Hub Fundos-rtm-portability</td>
+                    <td>RTM CLOUD</td>
+                    <td>Portabilidade</td>
+                    <td>Base de dados Keycloak / rtm-Funds-Info e rtm-Participants</td>
+                    <td>Acesso as APIs</td>
+                    <td>Suporte Hub Fundos</td>
+                    <td>Node.js / Nest.js</td>
+                    <td>-</td>
+                    <td>Março 2022</td>
+                    <td>Alta disponibilidade Kubernetes - SP / RJ</td>
+                    <td>Aplicação / Backup</td>
+                    <td>KUMA</td>
+                </tr>
+                <tr>
+                    <th>HUB FUNDOS DEV / UAT / CERT / PROD</th>
+                    <td>Hub Fundos-rtm-settlement</td>
+                    <td>RTM CLOUD</td>
+                    <td>Liquidação</td>
+                    <td>Base de dados Keycloak / rtm-Funds-spa</td>
+                    <td>Acesso as APIs</td>
+                    <td>Suporte Hub Fundos</td>
+                    <td>Node.js / Nest.js</td>
+                    <td>-</td>
+                    <td>Março 2022</td>
+                    <td>Alta disponibilidade Kubernetes - SP / RJ</td>
+                    <td>Aplicação / Backup</td>
+                    <td>KUMA</td>
+                </tr>
+                <tr>
+                    <th>HUB FUNDOS DEV / UAT / CERT / PROD</th>
+                    <td>Hub Fundos-rtm-scheduler</td>
+                    <td>RTM CLOUD</td>
+                    <td>Agendamento de serviços</td>
+                    <td>Base de dados Keycloak</td>
+                    <td>Acesso as APIs</td>
+                    <td>Suporte Hub Fundos</td>
+                    <td>Node.js / Nest.js</td>
+                    <td>-</td>
+                    <td>Março 2022</td>
+                    <td>Alta disponibilidade / Kubernets - SP/RJ</td>
+                    <td>Aplicação / Backup</td>
+                    <td>KUMA</td>
+                </tr>
+                <tr>
+                    <th>HUB FUNDOS DEV / UAT / CERT / PROD</th>
+                    <td>Hub Fundos-rtm-webhlook</td>
+                    <td>RTM CLOUD</td>
+                    <td>Notificação</td>
+                    <td>Base de dados Keycloak</td>
+                    <td>Acesso as APIs</td>
+                    <td>Suporte Hub Fundos</td>
+                    <td>Node.js / Nest.js</td>
+                    <td>-</td>
+                    <td>Março 2022</td>
+                    <td>Alta disponibilidade - SP / RJ</td>
+                    <td>Aplicação / Backup</td>
+                    <td>KUMA</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+<script src="index.js"></script>
+
+</html>
