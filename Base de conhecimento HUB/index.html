@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gabriel Santos">
+    <link rel="stylesheet" href="style.css">
+    <title>Base De conhecimento Hub Fundos</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <img class="cabecalho-imagem" src="LOGOL.png">
+            <h1 class="cabecalho-menu">Base de Conhecimento Hub Fundos</h1>
+    </header>
+
+    <main>
+        <article>
+            <h1>Portabilidades</h1>
+            <h4>Ticket:</h4> I2207-02502 - Indisponibilidade Parcial - Hub Fundos
+            <h4>Ambiente:</h4> Hub Fundos CERT
+            <h4>Sintoma:</h4> Falha de acesso
+            <h4>Causa Raiz:</h4> Após atualização da versão, a fila de comunicação entre os componentes Portability e Participants não estava ativa.
+            <h4>Solução Definitiva:</h4>Recriar a fila de comunicação.
+            <hr>
+            <h4>Ticket:</h4> I2207-04276 - Indisponibilidade Total - Hub Fundos
+            <h4>Ambiente:</h4> Hub Fundos CERT
+            <h4>Sintoma:</h4> Falha de acesso
+            <h4>Causa Raiz:</h4> Componente rtm-portability não tinha sido atualizado no dia 15/07.
+            <h4>Solução Definitiva:</h4>Atualização do componente rtm-portability.
+            <hr>
+            <h4>Ticket:</h4> I2207-08072 - Indisponibilidade Parcial - Hub Fundos
+            <h4>Ambiente:</h4> Hub Fundos PROD
+            <h4>Sintoma:</h4> Falha Funcioanl - cliente Modal
+            <h4>Causa Raiz:</h4> Ao submeter um arquivo sem portabilidades para o serviço rtm-portability, a aplicação está retornando status OK(201), dando uma falsa impressão de que foram registradas portabilidades.
+            <h4>Solução de Contorno:</h4>Solicitar ao usuário que não envie arquivos vazios.
+            <h4>Solução Definitiva:</h4>Implementar tratamento para arquivos vazios no serviço rtm-portability.
+        </article>
+        <hr>
+        <article>
+            <h1>Integralizações</h1>
+            <h4>Ticket:</h4> I2206-03923 - Alteração do valor da Operação
+            <h4>Ambiente:</h4> Hub Fundos CERT
+            <h4>Sintoma:</h4> Erro Funcional
+            <h4>Causa Raiz:</h4> A formatação do campo 'Valor da Operação' era alterada na aprovação do Custodiante.
+            <h4>Solução Definitiva:</h4>Correção da formatação do campo na aprovação do Custodiante.
+            <hr>
+            <h4>Ticket:</h4> I2206-07391 - Alteração do valor da Operação
+            <h4>Ambiente:</h4> Hub Fundos CERT
+            <h4>Sintoma:</h4> Erro Funcional
+            <h4>Causa Raiz:</h4> Formatação inválida dos campos Qtd Cotas e Valor para Resgate por Quantidade Cotas e RI.
+            <h4>Solução Definitiva:</h4>Formatação dos campos Qtd Cotas e Valor.
+            <hr>
+            <h4>Ticket:</h4> I2207-07272 - Erro na consulta
+            <h4>Ambiente:</h4> Hub Fundos CERT
+            <h4>Sintoma:</h4> Erro ao aprovar operação B3 - Custodiante
+            <h4>Causa Raiz:</h4> Configuração de rota incorreta do componente rtm-settlement.
+            <h4>Solução Definitiva:</h4>Correção da rota de comunicação.
+        </article>
+        <hr>
+        <article>
+            <h1>Infraestrutura</h1>
+            <h4>Ticket:</h4> I2208-00965 - Indisponibilidade parcial API - Clientes
+            <h4>Ambiente:</h4> Hub Fundos CERT
+            <h4>Sintoma:</h4> Falha no consumo da API de CERT para o cliente Britech
+            <h4>Causa Raiz:</h4> Instabilidade no gerenciamento de certificado da API para disponibilizar o serviço.
+            <h4>Solução Definitiva:</h4> Alteração da arquitetura de gerenciamento da API, migrando da Infraestrutura de microserviço(clusters) para a RTM Cloud(Load Balancer).
+            <hr>
+            <h4>Ticket:</h4> I2209-03008 - Instabilidade Infraestrutura Produção
+            <h4>Ambiente:</h4> Hub Fundos PROD
+            <h4>Sintoma:</h4> Degradação e oscilação no acesso aos serviços do Hub Fundos(todos os serviços).
+            <h4>Causa Raiz:</h4> Manutenção programada de Clean-Up do Storage RTM Cloud.
+            <h4>Solução Definitiva:</h4> Clean-up do Sotrage RTM Cloud.
+            <hr>
+            <h4>Ticket:</h4> I2209-06373 - Instabilidade Infraestrutura Produção
+            <h4>Ambiente:</h4> Hub Fundos PROD
+            <h4>Sintoma:</h4> Degradação e oscilação no acesso aos serviços do Hub Fundos (Portabilidades).
+            <h4>Causa Raiz:</h4> Baixa capacidade de memória no Banco de Dados PostegreSQL de Produção.
+            <h4>Solução Definitiva:</h4>Aumento de recurso de memória no Banco de Dados.
+            <hr>
+            <h4>Ticket:</h4> I2209-06599 - Instabilidade Infraestrutura Produção
+            <h4>Ambiente:</h4> Hub Fundos PROD
+            <h4>Sintoma:</h4> Degradação e oscilação no acesso aos serviços do Hub Fundos (Portabilidades).
+            <h4>Causa Raiz:</h4> Aumento de requisições indevidas no Banco de Dados PostegreSQL de Produção.
+            <h4>Solução Definitiva:</h4> Deleção do usuário RTM_HUB_Read que causava alto volume de requisições ao Banco de Dados.
+            <hr>
+            <h4>Ticket:</h4> I2209-05843 - Serviço Swift RTM Cloud
+            <h4>Ambiente:</h4> RTM CLOUD
+            <h4>Sintoma:</h4> Falha de acesso via VPN
+            <h4>Causa Raiz:</h4> Bloqueio de portas TCP via VPN RTM Cloud para consumo do serviço Swift.
+            <h4>Solução Definitiva:</h4>Via troubleshooting com o SOC RTM, foram liberadas as portas para o endpoint VPN(portas 4000 e 8080).
+            <hr>
+        </article>
+        <hr>
+        <article>
+            <h1>Fundos</h1>
+            <h4>Ticket:</h4> I2206-04160 - Erro na Consulta
+            <h4>Ambiente:</h4> Hub Fundos PROD
+            <h4>Sintoma:</h4> Erro Funcional
+            <h4>Causa Raiz:</h4> Valor incorreto retornado a partir da carga de um fundo antigo.
+            <h4>Solução Definitiva:</h4> Inclusão do valor correto no campo 'Aplicação Mínima via Cadastro de Fundos'.
+            <hr>
+            <h4>Ticket:</h4> I2207-04807 - Erro na Consulta
+            <h4>Ambiente:</h4> Hub Fundos PROD
+            <h4>Sintoma:</h4> Falha de acesso ao serviço Prestadores
+            <h4>Causa Raiz:</h4> Bloqueio de Rota na RTM.
+            <h4>Solução Definitiva:</h4> Desbloqueio de rota na RTM.
+        </article>
+    </main>
+    
+</body>
+</html>
