@@ -10,13 +10,6 @@ function variosArgumentos(...args) {
 function converteObjetoEmArrays(objetoExemplo) {
     // TODO: converta um objeto em um array de arrays, sendo o primeiro, as chaves, e no segundo, os valores
     // E.x. converteObjetoEmArrays({nome: 'Pedro', local: 'Copa do Mundo'}) => [['nome', 'local'], ['Pedro', 'Copa do Mundo']]
-    const keys = []
-    const values = []
-    Object.entries(objetoExemplo).forEach(([key, value]) => {
-        keys.push(key)
-        values.push(value)
-    })
-    return [keys, values]
 }
 
 function retornarArgumentosEmObjeto(...args) {
