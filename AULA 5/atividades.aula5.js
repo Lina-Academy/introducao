@@ -4,7 +4,6 @@
 
 function quantidadeDeElementos(arrayFicticio) {
     // TODO: retorne a quantidade de elementos de um arrayFicticio
-    console.log(quantidadeDeElementos.Length); 
 }
 
 function ordenarArray(arrayFicticio) {
@@ -39,6 +38,8 @@ function ordemDeChamada(listaDeAlunos) {
     // Separe os alunos por "/" e indique o número do aluno por ordem
     // E.x. ordemDeChamada(["Alan", "Carlos", "Bruno"]) => "1 - Alan / 2 - Bruno / 3 - Carlos"
 }
+
+ordemDeChamada(['Alan', 'Carlos', 'Bruno'])
 
 module.exports = {
     fatia,
