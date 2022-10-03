@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+    background: none;
+}
+
+.cabecalho {
+    display: grid;
+    grid-template-columns: minmax(250px,1fr) 4fr;
+    grid-template-areas: "logo menuSup";
+    background-color: #44b9b7;
+    padding: 2rem 2rem 2rem 0;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 0px;
+    align-items: center;
+    box-shadow: 0 2px 5px #70707060;
+    border-bottom: 1px solid #00908c;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(0, 144, 140);
+}
+
+.cabecalho-imagem {
+    text-align: center;
+    width: 110px;
+    height: 54px;
+    background-position: 50%;
+    background-position-x: 50%;
+    background-position-y: center;
+}
+
+.cabecalho-menu {
+    display: flex;
+    color: white;
+    gap: 32px;
+    text-align: justify;
