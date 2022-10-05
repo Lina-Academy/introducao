@@ -24,7 +24,7 @@ backBtn.addEventListener("click", (evento) => {
   evento.preventDefault()
   // Mostra botão novamente
   displayForm.classList.remove("d-none")
-  // Esconde formulário
+  // Esconde formulárioimage.png
   form.classList.add("d-none")
   // Não basta adicionarmos d-none
   // Precisamos remover display-vert
@@ -39,9 +39,6 @@ submitBtn.addEventListener("click", (evento) => {
   const ambiente = form.querySelector("#ambiente").value
   const aplicacao = form.querySelector("#aplicacao").value
   const infra = form.querySelector("#infraestrutura").value
-  const objetivo = form.querySelector("#objetivo").value
-  const dependencia = form.querySelector("#dependencia").value
-
   // Criar as células
   // Repassar para elementos a serem criados
   const th = document.createElement("th") // criar uma tag <th></th>
@@ -58,11 +55,10 @@ submitBtn.addEventListener("click", (evento) => {
   tr.appendChild(th)
   tr.appendChild(tdAplicacao)
   tr.appendChild(tdInfra)
-  tr.appendChild(tdObjetivo)
   //   <tr> <th></th> <td></td> <td></td> </tr>
 
   // Selecionar tabela
   const tableBody = document.querySelector("tbody")
   // Inserir a linha na tabela
   tableBody.insertBefore(tr, tableBody.firstChild)
-})
+}) 
