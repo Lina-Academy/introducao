@@ -45,8 +45,7 @@
 
   .tabela {
     border-collapse: collapse;
-    margin-top: 12px;
-    margin: 10px;
+    margin: 20px;
   }
 
   .tabela-cabecalho {
@@ -63,6 +62,7 @@
   }
 
   .evento {
+    margin: 20px;
     margin-top: 20px;
     margin-top: 4vh;
     width: 200px;
@@ -86,23 +86,23 @@
   }
   
   .display-vert {
+    margin: 20px;
     display: flex;
     flex-direction: column;
-    margin: 20px;
-    width: 500px;
+    width: 800px;
   }
 
   .flex {
     display: flex;
-    padding-top: 10px;
   }
   
   button {
-    margin: 8px;
-    margin-bottom: 15px;
+    margin: 10px;
+    margin-bottom: 10px;
     width: 100px;
     height: 30px;
     background-color: #44b9b7;
     color: black;
-    font-size: 17px;
+    font-size: 15px;
+    cursor: pointer;
   }
